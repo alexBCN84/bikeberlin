@@ -1,13 +1,64 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
 html, body {
+	height: 100%;
 	font-family: 'Raleway', sans-serif;
+}
+//navigation
+.brand{ font-family: 'Michroma', sans-serif; }
+
+.navbar-default .navbar-nav>li>a { color: #db1e26;}
+
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:hover { color: #dbc01e; }
+
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+	background-color: #db1e26;
+	color: #dbc01e;
+}
+
+.dropdown-menu>li>a { color: #db1e26; }
+
+.dropdown-menu>li>a:focus, 
+.dropdown-menu>li>a:hover {
+	background-color: #db1e26;
+	color: #dbc01e;
 }
 
 h1 {
 	font-weight: 500;
 	color: #ff005a;
-	text-align: left;
-	margin-left: 25%;
+	text-align: center;
 }
+//space on top of pages
+.top-page { margin-top: 50px }
+/*cover image*/
+.cover {
+	border-radius: 5px;
+	width: 100%;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -70px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+//footer
+/* Set the fixed height of the footer here */
+footer {
+  height: 60px;
+}
+
+.copyright { 
+	padding-top: 20px;
+	color: #ff005a;
+}  
