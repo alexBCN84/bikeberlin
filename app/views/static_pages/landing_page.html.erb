@@ -1,0 +1,8 @@
+<div class="container top-page">
+	<h2>Featured Product:</h2>
+	<% if nil %>
+		<p>You have no featured products to show</p>
+	<% else %>
+		<p><%= @featured_product.name %></p>
+	<% end %>
+</div>
