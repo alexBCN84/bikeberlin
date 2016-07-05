@@ -1,5 +1,5 @@
 <div class="container top-page">
-	<h2>Featured Products:</h2><br>
+	<h1 class="center">Featured Products:</h1><br>
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -16,7 +16,7 @@
     <div class="item<%= " active" if product == @products.first %>">
      <center><%= image_tag(product.image_url) %></center>       
      <div class="carousel-caption">         
-       <%= product.name %>       
+       <p class="caption"><%= product.name %></p>       
      </div>         
     </div>     
   <% end %>   
@@ -33,4 +33,6 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+  <hr>
+  <h2 class="center"><%= link_to "Access here to our Listing Products", products_path %></h2>
 </div>

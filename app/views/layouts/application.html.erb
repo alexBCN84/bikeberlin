@@ -36,22 +36,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a class="page-scroll" href="../static_pages/index">Home</a>
+              <%= link_to "Home", static_pages_index_path %>
             </li>
             <li>
-              <a class="page-scroll" href="../static_pages/about">About</a>
+              <%= link_to "Products", static_pages_landing_page_path %>
             </li>
             <li>
-              <a class="page-scroll" href="../static_pages/contact">Contact</a>
+              <%= link_to "About", static_pages_about_path %>
             </li>
             <li>
-              <a class="page-scroll" href="#"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#"><i class="fa fa-instagram"></i></a>
+              <%= link_to "Contact", static_pages_contact_path %>
             </li>
           </ul>
         </div>

@@ -19,15 +19,19 @@ pre {
 }
 
 a {
-  color: #000;
+  text-decoration: none;
+  color: inherit;
+  transition: all .4s ease;
 
   &:visited {
     color: #666;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #33aaee;
+    text-decoration: none;
+    background-color: none;
+    font-weight: 500;
   }
 }
 

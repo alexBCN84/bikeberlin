@@ -7,6 +7,13 @@ html, body {
 	height: 100%;
 	font-family: 'Raleway', sans-serif;
 }
+
+h1 {
+	font-weight: 500;
+	color: #ff005a;
+	text-align: center;
+}
+
 //navigation
 .brand{ font-family: 'Michroma', sans-serif; }
 
@@ -29,15 +36,11 @@ html, body {
 	color: #dbc01e;
 }
 
-h1 {
-	font-weight: 500;
-	color: #ff005a;
-	text-align: center;
-}
-
 .center {
 	text-align: center;
 }
+
+
 //space on top of pages
 .top-page { margin-top: 50px }
 /*cover image*/
@@ -70,3 +73,11 @@ footer {
 	padding-top: 20px;
 	color: #ff005a;
 }  
+
+// featured products carousel
+.caption {
+	color: #ff005a;
+	text-align: center;
+	font-size: 1.5em;
+	text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
