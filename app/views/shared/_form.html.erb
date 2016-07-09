@@ -1,41 +1,50 @@
-<%= form_for(@product) do |f| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation top-page">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<div class="container top-page">
+  <div class="row">   
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4"> 
+      <%= form_for(@product) do |f| %>
+   
+        <% if @product.errors.any? %>
+          <div id="error_explanation top-page">
+            <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-      <ul>
-      <% @product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+            <ul>
+              <% @product.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= f.label :name %><br>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :category %><br>
+          <%= f.text_field :category, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description %><br>
+          <%= f.text_area :description, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :image_url %><br>
+          <%= f.text_field :image_url, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :color %><br>
+          <%= f.text_field :color, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :price %><br>
+          <%= f.text_field :price, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Submit", class: "btn btn-default" %>
+          <%= link_to 'Back', products_path, class: "btn btn-default" %>
+        </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
+  </div>
+</div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-    <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
-  </div>
-  <div class="field">
-    <%= f.label :color %><br>
-    <%= f.text_field :color %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
