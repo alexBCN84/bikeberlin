@@ -29,7 +29,17 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand brand page-scroll" href="#page-top"><span style="color: red">BB</span></a>
-        </div>
+          <span id="search-box-xs">
+            <%= form_tag("/products", method: "get") do %>
+              <%= label_tag(:q, "Search for:", class: "hidden") %>
+              <%= text_field_tag(:q, "", placeholder: "  Search", class: "search-xs") %>
+              <%= button_tag(type: 'submit') do %>
+                <span class="glyphicon glyphicon-search icon-search"></span>
+              <% end %>
+            <% end %>
+          </span>
+        </div> 
+        
         <!-- /.nav-header -->
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,11 +58,13 @@
               <%= link_to "Contact", static_pages_contact_path %>
             </li>
           
-            <li>
+            <li id="search-box">
               <%= form_tag("/products", method: "get") do %>
-                <%= label_tag(:q, "Search for:") %>
-                <%= text_field_tag(:q) %>
-                <%= submit_tag("Search") %>
+                <%= label_tag(:q, "Search for:", class: "hidden") %>
+                <%= text_field_tag(:q, "", placeholder: "  Search for bikes", class: "search-xl") %>
+                <%= button_tag(type: 'submit', class: "btn btn-search-color") do %>
+                  <span class="glyphicon glyphicon-search icon-search"></span>
+                <% end %>
               <% end %>
             </li>
           </ul>

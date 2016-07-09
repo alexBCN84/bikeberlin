@@ -3,78 +3,38 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-html, body {
-	height: 100%;
-	font-family: 'Raleway', sans-serif;
-}
-
-h1 {
-	font-weight: 500;
-	color: #ff005a;
-	text-align: center;
-}
-
-//navigation
-.brand{ font-family: 'Michroma', sans-serif; }
-
-.navbar-default .navbar-nav>li>a { color: #db1e26;}
-
-.navbar-default .navbar-nav>li>a:focus, 
-.navbar-default .navbar-nav>li>a:hover { color: #dbc01e; }
-
-.navbar-default .navbar-nav>.open>a:focus,
-.navbar-default .navbar-nav>.open>a:hover {
-	background-color: #db1e26;
-	color: #dbc01e;
-}
-
-.dropdown-menu>li>a { color: #db1e26; }
-
-.dropdown-menu>li>a:focus, 
-.dropdown-menu>li>a:hover {
-	background-color: #db1e26;
-	color: #dbc01e;
-}
-
-.center {
-	text-align: center;
-}
-
-
-//space on top of pages
-.top-page { margin-top: 50px }
+//////////////////////static pages index //////////////////////////////
 /*cover image*/
-.featured {
+.img-cover {
 	border-radius: 5px;
 	width: 70%;
-/*centering image*/
+
+	/*centering image*/
 	display: block;
   margin: 0 auto;
 
 }
 
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
-}
 
-//footer
-/* Set the fixed height of the footer here */
-footer {
-  height: 60px;
-}
-
-.copyright { 
-	padding-top: 20px;
-	color: #ff005a;
-}  
-
+////////////////////// landing page styles ////////////////////////////
 // featured products carousel
+
+.featured {
+	width: 100%;
+	background-color: #dbdbdb;
+	border-bottom: 1px solid #97a6aa;
+}
+.carousel-control { color: #ff005a;}
+
+a.right.carousel-control, 
+a.left.carousel-control {background:none;}
+
+.carousel-inner {
+	border: 5px solid #fbfbfb;
+	border-radius: 10px;
+	background-color: #fff;
+}
+
 .caption {
 	color: #ff005a;
 	text-align: center;

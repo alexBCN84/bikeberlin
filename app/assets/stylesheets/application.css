@@ -13,3 +13,114 @@
  *= require_tree .
  *= require_self
  */
+
+html, body {
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	font-weight: 500;
+	color: #ff005a;
+	text-align: center;
+}
+.center {
+	text-align: center;
+}
+
+/*space on top of pages*/
+
+.top-page { 
+	margin-top: 50px;
+ }
+
+/*navigation*/
+.brand{ font-family: 'Michroma', sans-serif; }
+
+.navbar-default .navbar-nav>li>a { color: red;}
+
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:hover { color: #dbc01e; }
+
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+	background-color: #db1e26;
+	color: #dbc01e;
+}
+
+.dropdown-menu>li>a { color: #db1e26; }
+
+.dropdown-menu>li>a:focus, 
+.dropdown-menu>li>a:hover {
+	background-color: #db1e26;
+	color: #dbc01e;
+}
+
+/*search form over 767 px width*/
+
+#search-box {
+	margin-top: 10px;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+
+.search-xl {
+	width: 150px;
+	height: 34px;
+	border: 1px solid #ff7f7f;
+	border-radius: 4px;
+	color: #ff7f7f;
+}
+.btn-search-color {
+	background-color: #ffb2b2;
+}
+
+@media(min-width: 767px) {
+	#search-box-xs {display: none;}
+}
+
+
+/*search form under 767 px width*/
+
+.search-xs {
+	margin-top: 15px;
+	width: 100px;
+	height:20px;
+	border: 1px solid #ff7f7f;
+	border-radius: 4px;
+	color: #ff7f7f;
+}
+
+
+@media(max-width: 767px) {
+	#search-box {display: none;}
+}
+
+/*common search styles*/
+.icon-search {
+	color: red;
+}
+
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/*footer
+/* Set the fixed height of the footer here */
+footer {
+  height: 60px;
+}
+
+.copyright { 
+	padding-top: 20px;
+	color: #ff005a;
+}  
+
