@@ -8,3 +8,13 @@ class UserMailer < ApplicationMailer
         :subject => "A new contact form message from #{name}")
   end
 end
+
+# app/mailers/user_mailer.rb
+class UserMailer < ActionMailer::Base
+  default from: "alejandro.ginesmartinez@gmail.com"
+
+  def password_changed(id)
+    @user = User.find(id)
+    mail to: @user.email, subject: "Your password has changed"
+  end
+end
