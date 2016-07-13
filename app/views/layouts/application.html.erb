@@ -13,24 +13,14 @@
 </head>
 
 <body>
-	<div id="wrap">
-        <!-- ========================= -->
-    <!-- welcome message comes now -->
-    <!-- ========================= -->
-    <% if alert %>
-      <div class="alert bg-warning alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"<span aria-hidden="true">&times;</span></button>
-        <%= alert %></div>
-    <% end %> 
-    <% if notice %>
-      <div class="alert alert-success alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <%= notice %></div>
-    <% end %>
+      
+  <% if alert %>
+  <p class="alert alert-warning" role="alert"><%= alert %></p>
+  <% end %>
 
-    <!-- //////////////////// -->
-    <!-- Welcome message ends -->
-    <!-- //////////////////// -->
+
+	<div id="wrap">
+
 		<!-- ==================== -->
     <!-- Navigation comes now -->
     <!-- ==================== -->
@@ -45,7 +35,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand brand page-scroll" href="#page-top"><span style="color: red">BB</span></a>
+          <a class="navbar-brand brand page-scroll" href="#page-top"><span class="logo">BB</span></a>
           <span id="search-box-xs">
             <%= form_tag("/products", method: "get") do %>
               <%= label_tag(:q, "Search for:", class: "hidden") %>
@@ -84,16 +74,37 @@
                 <% end %>
               <% end %>
             </li>
+            <li id="sm-login-out">
+              <% if user_signed_in? %>
+                <a>Signed in as...
+                  <% if current_user.first_name.present?%>
+                    <%= current_user.first_name %>
+                  <% else %>
+                    <%= current_user.email %> 
+                  <% end %>
+                </a>          
+              <% end %>
+            </li>
+            <li id="sm-login-out">
+              <% if user_signed_in? %>
+              <a>|</a>
+              <% end %>
+            </li>
             <li>
-              <ul class="nav pull-right">
-                <li>
+              <% if user_signed_in? %>
+                <%= link_to 'Profile', edit_user_path(current_user) %> 
+              <% else %>
+                <%= link_to('Sign up', new_user_registration_path) %>
+              <% end %>
+            </li>
+            <li id="sm-login-out">
+              <div class="btn btn-default btn-login">
                 <% if user_signed_in? %>
-                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-                <% else %>
-                  <%= link_to('login', new_user_session_path) %>
-                <% end %>
-                </li>
-              </ul>
+                 <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                <% else%>
+                  <%= link_to('Login', new_user_session_path) %>
+                <% end %> 
+              </div>
             </li>
           </ul>
         </div>
@@ -105,10 +116,31 @@
     <!-- /////////////// -->
     <!-- Navigation ends -->
     <!-- /////////////// -->
-
-
 		<%= yield %>
-	</div>
+    <div class="container top-page xs-login-out">
+      <div class="row">
+        <div class="center">
+          <% if user_signed_in? %>
+            <font color="red">Signed in as...
+              <% if current_user.first_name.present?%>
+                <%= current_user.first_name %>
+              <% else %>
+                <%= current_user.email %> 
+              <% end %>
+            </font>          
+          <% end %>
+        </div>
+        
+        <div class="btn btn-default btn-login col-xs-6" style="margin-left: 25%">
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else%>
+            <%= link_to('Login', new_user_session_path) %>
+          <% end %> 
+        </div><!-- /.btn -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+	</div><!-- /#wrap -->
 	
 	<footer>
 		<div class="container copyright">&copy; 2016 Bike Berlin</div>
