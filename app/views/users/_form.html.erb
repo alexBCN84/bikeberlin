@@ -21,5 +21,6 @@
   </div>
   <div class="form-group">
     <%= f.submit class: "btn btn-default" %>
+    <%= link_to 'Delete profile', @user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
   </div>
 <% end %>
