@@ -5,7 +5,7 @@
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-          <% @products.each do |product| %>
+          <% @products_featured.each do |product| %>
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
           <% end %>
         </ol>
@@ -13,8 +13,8 @@
 
         <!-- Wrapper for slides -->   
         <div class="carousel-inner" role="listbox">     
-          <% @products.each do |product| %>     
-            <div class="item<%= " active" if product == @products.first %>">
+          <% @products_featured.each do |product| %>     
+            <div class="item<%= " active" if product == @products_featured.first %>">
               <%= image_tag(product.image_url, class: "img-responsive")%>    
               <div class="carousel-caption">         
                 <p class="caption"><%= product.name %></p>      
@@ -38,4 +38,4 @@
   </div>
   <br>
 </div>
-<h2 class="center"><%= link_to "Access here to our Listing Products", products_path %></h2>
+

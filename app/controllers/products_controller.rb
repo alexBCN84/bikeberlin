@@ -19,8 +19,8 @@ class ProductsController < ApplicationController
         @products = Product.all
       end
     end
+    @products_featured = Product.limit(3)
   end
-    
 
   # GET /products/1
   # GET /products/1.json
