@@ -14,10 +14,6 @@
 
 <body>
       
-  <% if alert %>
-  <p class="alert alert-warning" role="alert"><%= alert %></p>
-  <% end %>
-
 
 	<div id="wrap">
 
@@ -116,6 +112,13 @@
     <!-- /////////////// -->
     <!-- Navigation ends -->
     <!-- /////////////// -->
+    <% if alert %>
+      <p id="alert"class="alert alert-warning" role="alert"><%= alert %></p>
+    <% end %>
+    <% if notice %>
+      <p id ="notice" class="alert alert-info"><%= notice %></p>
+    <% end %>
+
 		<%= yield %>
     <div class="container top-page xs-login-out">
       <div class="row">
