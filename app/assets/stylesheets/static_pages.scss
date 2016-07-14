@@ -16,12 +16,12 @@
 }
 
 
-////////////////////// landing page styles ////////////////////////////
+////////////////////// products index styles ////////////////////////////
 // featured products carousel
 
 .featured {
 	width: 100%;
-	background-color: #dbdbdb;
+	background: url(http://berlinmap360.com/website/var/tmp/image-thumbnails/0/651/thumb__map/berlin-bike-routes.pjpeg);
 	border-bottom: 1px solid #97a6aa;
 }
 .carousel-control { color: #ff005a;}
@@ -41,9 +41,9 @@ a.left.carousel-control {background:none;}
 	font-size: 1.5em;
 	text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
-
+.product-length { height: 600px; }
 ////////////////// thank you page///////////////////////////////////////////////////
 
-.alert {
+.alert_thankyou {
 	margin-top: 200px;
 }
