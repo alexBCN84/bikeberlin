@@ -45,11 +45,9 @@
   <h1>See our Listing Bikes</h1>
   <br>
 
-  <div class="container-fluid">
-    <div class="row">
-        <%= render @products %>
-    </div><!-- /row--> 
-  </div>
+  <div class="row">
+    <%= render @products %>
+  </div><!-- /row--> 
 
   <% if user_signed_in? %>
   	<%= link_to 'New Product', new_product_path, class: "btn btn-default" %>
