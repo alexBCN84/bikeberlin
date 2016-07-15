@@ -41,14 +41,6 @@ h1 {
 	border: 1px solid red; 
 	border-radius: 4px;
 }
-/* alert display*/
-.alert { 
-	position: absolute;
-	top: -150px;
-	width: 100%;
-	background-color: rgba(255,178,178,.5);
-	 }
-
 
 /*navigation*/
 .brand{ font-family: 'Michroma', sans-serif; }

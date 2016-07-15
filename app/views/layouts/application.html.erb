@@ -14,7 +14,6 @@
 
 <body>
       
-
 	<div id="wrap">
 
 		<!-- ==================== -->
@@ -112,14 +111,22 @@
     <!-- /////////////// -->
     <!-- Navigation ends -->
     <!-- /////////////// -->
-    <% if alert %>
-      <p id="alert"class="alert alert-warning" role="alert"><%= alert %></p>
+
+    <!-- alerts and notices -->
+
+    <%if notice%>
+      <p id="notice" class="alert top-page alert-info center"><%= notice %></p>
     <% end %>
-    <% if notice %>
-      <p id ="notice" class="alert alert-info"><%= notice %></p>
+    <% if alert%>
+      <p id ="alert" class="alert top-page alert-danger center"><%= alert %></p>
     <% end %>
 
+    <!--/ alerts and notices -->
+
 		<%= yield %>
+
+ 
+
     <div class="container top-page xs-login-out">
       <div class="row">
         <div class="center">
@@ -142,10 +149,11 @@
           <% end %> 
         </div><!-- /.btn -->
       </div><!-- /.row -->
-    </div><!-- /.container -->
+    </div><!-- /.container login and out for small viewports-->
 	</div><!-- /#wrap -->
 	
 	<footer>
+
 		<div class="container copyright">&copy; 2016 Bike Berlin</div>
 	</footer>
 </body>
