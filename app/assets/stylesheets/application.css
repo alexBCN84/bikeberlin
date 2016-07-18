@@ -48,20 +48,23 @@ h1 {
 .navbar-default .navbar-nav>li>a { color: red;}
 
 .navbar-default .navbar-nav>li>a:focus, 
-.navbar-default .navbar-nav>li>a:hover { color: #ffb2b2; }
+.navbar-default .navbar-nav>li>a:hover { 
+	background-color: #ffb2b2;
+	color: #ff005a; 
+}
 
 .navbar-default .navbar-nav>.open>a:focus,
 .navbar-default .navbar-nav>.open>a:hover {
-	background-color: #db1e26;
-	color: #dbc01e;
+	background-color: #ffb2b2;
+	color: red;
 }
 
-.dropdown-menu>li>a { color: #db1e26; }
+.dropdown-menu>li>a { color: red }
 
 .dropdown-menu>li>a:focus, 
 .dropdown-menu>li>a:hover {
-	background-color: #db1e26;
-	color: #dbc01e;
+	background-color: #ffb2b2;
+	color: #ff005a;
 }
 
 /*search form over 767 px width*/
@@ -147,9 +150,11 @@ h1 {
 /*login-out session different viewports*/
 @media (min-width: 768px) {
 	.xs-login-out { display: none; }
+	.setting-mob { display: none; }
 }
 @media (max-width: 767px) {
 	#sm-login-out { display: none; }
+	.setting-comp { display: none; }
 }
 
 

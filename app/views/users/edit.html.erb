@@ -1,11 +1,12 @@
+<% provide(:title, "Edit user") %>
 <div class="container top-page">
-	<h1>Edit Profile</h1>
+	<h1>Update your profile</h1>
 	<div class="row top-page">
 		<div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4"> 	
 			<%= render 'form' %>
 
 			<%= link_to 'Show', @user %> |
-			<%= link_to 'Back', users_path %>
+			<%= link_to 'Back', root_path %>
 		</div>
 	</div>
 </div>
