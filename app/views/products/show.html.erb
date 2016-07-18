@@ -1,53 +1,77 @@
 <div class="container top-page">
 	<p id="notice"><%= notice %></p>
-
-	<font color="red">
-  	<h3>Name</h3>
-  </font>
-  <h4>
-  	<%= @product.name %>
-	</h4>
+	<h1>Product details</h1>
+	<hr>
+	<div class="row">
+		<div class="col-xs-12 col-sm-6">
+			<font color="red">
+  			<h4>Name</h4>
+  		</font>
+  		<p>
+  			<%= @product.name %>
+			</p>
 	
-		<font color= "red">
-			<h3>Category</h3>
-		</font>
-	<h4>
-		<%= @product.category %>
-	</h4>
+			<font color= "red">
+				<h4>Category</h4>
+			</font>
+			<p>
+				<%= @product.category %>
+			</p>
 
-	<font color= "red">
-		<h3>Description</h3>
-	</font>
+			<font color= "red">
+				<h4>Description</h4>
+			</font>
 
-	<h4>
-  	<%= @product.description %>
-	</h4>
+			<p>
+  			<%= @product.description %>
+			</p>
 
-	<font color= "red">
-		<h3>Image Url</h3>
-	</font>
-	<h4>
-  	<%= @product.image_url %>
-	</h4>
+			<!--<font color= "red">
+				<h3>Image Url</h3>
+			</font>
+			<h4>
+  			<%= @product.image_url %>
+			</h4>-->
 	
-	<font color= "red">
-		<h3>Color</h3>
-	</font>
+			<font color= "red">
+				<h4>Color</h4>
+			</font>
 
-	<h4>
-		<%= @product.color %>
-	</h4>
+			<p>
+				<%= @product.color %>
+			</p>
 
-	<font color= "red">
-		<h3>Price</h3>
-	</font>
+			<font color= "red">
+				<h4>Price</h4>
+			</font>
 
-	<h4>
-		<strong><%= @product.price %> € </strong>
-	</h4>
+			<p>
+				<strong><%= @product.price %> € </strong>
+			</p>
+			
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<%= image_tag(@product.image_url, class: "img-thumbnail img-responsive img-rounded")%>  
+			<br>
+
+		</div>
+
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-xs-12 col-sm-6">
+			<div id="reviews">
+				<h4><strong>Reviews</strong></h4>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<div id="ratings">
+				<h4><strong>Ratings</strong></h4>
+			</div>
+		</div>
+	</div>
 	<% if user_signed_in? %>
 		<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %> |
 	<% end %>
 	<%= link_to 'Back', products_path, class: "btn btn-default" %>
-
 </div>
