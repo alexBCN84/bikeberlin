@@ -1,8 +1,7 @@
 <div class="container">
-	<h1>Resend unlock instructions</h1>
-
-	<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
-  	<%= devise_error_messages! %>
+  <h1>Resend unlock instructions</h1>
+  <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+    <%= devise_error_messages! %>
     <div class="row top-page">
       <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4"> 
         <div class="field">
