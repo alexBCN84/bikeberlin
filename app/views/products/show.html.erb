@@ -1,5 +1,6 @@
 <div class="container top-page">
 
+
 	<h1>Product details</h1>
 	<hr>
 	<div class="row">
@@ -10,29 +11,31 @@
   		<p>
   			<%= @product.name %>
 			</p>
+
+
 	
-			<font color= "red">
-				<h4>Category</h4>
-			</font>
-			<p>
-				<%= @product.category %>
-			</p>
+      <font color= "red">
+        <h4>Category</h4>
+      </font>
+      <p>
+	<%= @product.category %>
+     </p>
+     <font color= "red">
+       <h4>Description</h4>
+     </font>
 
-			<font color= "red">
-				<h4>Description</h4>
-			</font>
+     <p>
+       <%= @product.description %>
+     </p>
 
-			<p>
-  			<%= @product.description %>
-			</p>
-
-			<!--<font color= "red">
-				<h3>Image Url</h3>
-			</font>
-			<h4>
-  			<%= @product.image_url %>
-			</h4>-->
+     <!--<font color= "red">
+        <h3>Image Url</h3>
+     </font>
+     <h4>
+       <%= @product.image_url %>
+     </h4>-->
 	
+
 			<font color= "red">
 				<h4>Color</h4>
 			</font>
@@ -59,10 +62,8 @@
 			<div id="add-reviews">
 				<%= render 'new_comment' %>
 			</div>
-
-		</div>
-
-	</div>
+    </div>
+  </div>
 	<div class="container">
 	<div class="row">
 		<div class="col-xs-12">

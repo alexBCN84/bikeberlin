@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
-	end
+  end
 
   def thank_you   
   @name = params[:name]   
@@ -10,6 +10,6 @@ class StaticPagesController < ApplicationController
     :to => 'alejandro.ginesmartinez@gmail.com',       
     :subject => "A new contact form message from #{@name}",       
     :body => @message).deliver_now 
-	end
+  end
 
 end

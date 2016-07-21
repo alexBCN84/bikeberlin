@@ -1,0 +1,101 @@
+2016-07-20T14:42:50.463959+00:00 app[web.1]:   Rendered static_pages/index.html.erb within layouts/application (0.3ms)
+2016-07-20T14:42:50.277533+00:00 app[web.1]: Completed 302 Found in 16ms (ActiveRecord: 7.4ms)
+2016-07-20T14:42:50.473366+00:00 app[web.1]: Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 3.8ms)
+2016-07-20T14:42:50.277354+00:00 app[web.1]: Redirected to https://biber.herokuapp.com/
+2016-07-20T14:42:50.462629+00:00 app[web.1]: Processing by StaticPagesController#index as HTML
+2016-07-20T14:42:45.618377+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=biber.herokuapp.com request_id=7f5aa8cd-c311-408f-90ab-e09ee6fe2933 fwd="196.221.8.124" dyno=web.1 connect=0ms service=7ms status=200 bytes=228
+2016-07-20T14:42:50.245257+00:00 heroku[router]: at=info method=GET path="/users/3/edit" host=biber.herokuapp.com request_id=d5111b58-75d5-422b-97ae-b5fba35ba559 fwd="196.221.8.124" dyno=web.1 connect=3ms service=27ms status=302 bytes=1128
+2016-07-20T14:42:50.441331+00:00 heroku[router]: at=info method=GET path="/" host=biber.herokuapp.com request_id=931b154e-5e89-42d6-a702-d1120e947015 fwd="196.221.8.124" dyno=web.1 connect=0ms service=25ms status=200 bytes=7313
+2016-07-20T15:15:21.456394+00:00 heroku[web.1]: State changed from up to down
+2016-07-20T15:15:21.455925+00:00 heroku[web.1]: Idling
+2016-07-20T15:15:23.812536+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2016-07-20T15:15:24.338763+00:00 app[web.1]: 	/app/vendor/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:174:in `select'
+2016-07-20T15:15:24.338766+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/handler/webrick.rb:34:in `run'
+2016-07-20T15:15:24.338768+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.2.0/gems/railties-4.2.6/lib/rails/commands/server.rb:80:in `start'
+2016-07-20T15:15:24.338748+00:00 app[web.1]: [2016-07-20 15:15:24] FATAL SignalException: SIGTERM
+2016-07-20T15:15:24.338765+00:00 app[web.1]: 	/app/vendor/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:32:in `start'
+2016-07-20T15:15:24.338765+00:00 app[web.1]: 	/app/vendor/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:162:in `start'
+2016-07-20T15:15:24.338770+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.2.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:75:in `tap'
+2016-07-20T15:15:24.338771+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.2.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:75:in `server'
+2016-07-20T15:15:24.338771+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.2.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+2016-07-20T15:15:24.338772+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.2.0/gems/railties-4.2.6/lib/rails/commands.rb:17:in `<top (required)>'
+2016-07-20T15:15:24.338773+00:00 app[web.1]: 	bin/rails:9:in `require'
+2016-07-20T15:15:24.338774+00:00 app[web.1]: 	bin/rails:9:in `<main>'
+2016-07-20T15:15:24.338829+00:00 app[web.1]: [2016-07-20 15:15:24] INFO  going to shutdown ...
+2016-07-20T15:15:24.338876+00:00 app[web.1]: [2016-07-20 15:15:24] INFO  WEBrick::HTTPServer#start done.
+2016-07-20T15:15:24.338897+00:00 app[web.1]: Exiting
+2016-07-20T15:15:24.338767+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+2016-07-20T15:15:24.338764+00:00 app[web.1]: 	/app/vendor/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:174:in `block in start'
+2016-07-20T15:15:24.338769+00:00 app[web.1]: 	/app/vendor/bundle/ruby/2.2.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:80:in `block in server'
+2016-07-20T15:15:25.294888+00:00 heroku[web.1]: Process exited with status 143
+2016-07-20T15:26:49.162763+00:00 heroku[web.1]: State changed from down to starting
+2016-07-20T15:26:49.162530+00:00 heroku[web.1]: Unidling
+2016-07-20T15:26:52.256655+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 23005 -e production`
+2016-07-20T15:26:57.207188+00:00 app[web.1]: [2016-07-20 15:26:57] INFO  WEBrick 1.3.1
+2016-07-20T15:26:57.207200+00:00 app[web.1]: [2016-07-20 15:26:57] INFO  ruby 2.2.4 (2015-12-16) [x86_64-linux]
+2016-07-20T15:26:57.207487+00:00 app[web.1]: [2016-07-20 15:26:57] INFO  WEBrick::HTTPServer#start: pid=3 port=23005
+2016-07-20T15:26:57.400680+00:00 heroku[web.1]: State changed from starting to up
+2016-07-20T15:26:59.254320+00:00 app[web.1]: Started GET "/" for 196.221.8.124 at 2016-07-20 15:26:59 +0000
+2016-07-20T15:26:59.345808+00:00 app[web.1]: Processing by StaticPagesController#index as HTML
+2016-07-20T15:26:59.254318+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2016-07-20T15:26:59.254309+00:00 app[web.1]: => Rails 4.2.6 application starting in production on http://0.0.0.0:23005
+2016-07-20T15:26:59.254265+00:00 app[web.1]: => Booting WEBrick
+2016-07-20T15:26:59.420140+00:00 app[web.1]:   [1m[36mUser Load (2.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+2016-07-20T15:26:59.463073+00:00 app[web.1]: Completed 200 OK in 117ms (Views: 85.8ms | ActiveRecord: 14.9ms)
+2016-07-20T15:26:59.370407+00:00 app[web.1]:   Rendered static_pages/index.html.erb within layouts/application (1.6ms)
+2016-07-20T15:26:59.254319+00:00 app[web.1]: => Ctrl-C to shutdown server
+2016-07-20T15:27:07.765713+00:00 app[web.1]:   [1m[36mProduct Load (1.5ms)[0m  [1mSELECT "products".* FROM "products"[0m
+2016-07-20T15:27:07.772084+00:00 app[web.1]:   [1m[35mUser Load (3.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+2016-07-20T15:27:07.748822+00:00 app[web.1]:   [1m[35mProduct Load (3.1ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+2016-07-20T15:27:07.776622+00:00 app[web.1]:   Rendered products/index.html.erb within layouts/application (32.2ms)
+2016-07-20T15:27:07.780693+00:00 app[web.1]: Completed 200 OK in 41ms (Views: 27.9ms | ActiveRecord: 12.3ms)
+2016-07-20T15:27:07.776453+00:00 app[web.1]:   Rendered products/_product.html.erb (9.7ms)
+2016-07-20T15:27:07.736118+00:00 app[web.1]: Started GET "/products" for 196.221.8.124 at 2016-07-20 15:27:07 +0000
+2016-07-20T15:27:07.739197+00:00 app[web.1]: Processing by ProductsController#index as HTML
+2016-07-20T15:26:59.461705+00:00 heroku[router]: at=info method=GET path="/" host=biber.herokuapp.com request_id=d3b7e54b-dbc7-43ed-bd7f-65ca189eebc7 fwd="196.221.8.124" dyno=web.1 connect=1ms service=216ms status=200 bytes=7037
+2016-07-20T15:27:00.035528+00:00 heroku[router]: at=info method=GET path="/assets/application-949f4d08bdfe7f4c6cb1a33b9ebc6a307d0e6ff9ffd8f5face7793239756895b.js" host=biber.herokuapp.com request_id=c691fe49-2637-4db1-aa49-82766cce2b84 fwd="196.221.8.124" dyno=web.1 connect=1ms service=7ms status=304 bytes=133
+2016-07-20T15:26:59.862441+00:00 heroku[router]: at=info method=GET path="/assets/application-dcf75c72458ead6cace84946dbf10fa1620db4f30c294fd8848399e672b5eaf5.css" host=biber.herokuapp.com request_id=7bc4c40d-d842-4608-8ae4-7489ddef9b98 fwd="196.221.8.124" dyno=web.1 connect=1ms service=8ms status=304 bytes=133
+2016-07-20T15:27:11.745106+00:00 app[web.1]: Started GET "/products/9" for 196.221.8.124 at 2016-07-20 15:27:11 +0000
+2016-07-20T15:27:11.774289+00:00 app[web.1]: 
+2016-07-20T15:27:11.747572+00:00 app[web.1]: Processing by ProductsController#show as HTML
+2016-07-20T15:27:11.774306+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "comments" does not exist
+2016-07-20T15:27:11.747632+00:00 app[web.1]:   Parameters: {"id"=>"9"}
+2016-07-20T15:27:11.755860+00:00 app[web.1]:   [1m[36mProduct Load (1.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 9]]
+2016-07-20T15:27:11.774309+00:00 app[web.1]: LINE 5:                WHERE a.attrelid = '"comments"'::regclass
+2016-07-20T15:27:11.772861+00:00 app[web.1]: Completed 500 Internal Server Error in 25ms (ActiveRecord: 6.8ms)
+2016-07-20T15:27:11.774310+00:00 app[web.1]:                                           ^
+2016-07-20T15:27:11.774311+00:00 app[web.1]: :               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2016-07-20T15:27:11.774311+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+2016-07-20T15:27:11.774313+00:00 app[web.1]:                 FROM pg_attribute a LEFT JOIN pg_attrdef d
+2016-07-20T15:27:11.774313+00:00 app[web.1]:                   ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2016-07-20T15:27:11.774314+00:00 app[web.1]:                WHERE a.attrelid = '"comments"'::regclass
+2016-07-20T15:27:11.774315+00:00 app[web.1]:                  AND a.attnum > 0 AND NOT a.attisdropped
+2016-07-20T15:27:11.774315+00:00 app[web.1]:                ORDER BY a.attnum
+2016-07-20T15:27:11.774316+00:00 app[web.1]: ):
+2016-07-20T15:27:11.774317+00:00 app[web.1]:   app/controllers/products_controller.rb:28:in `show'
+2016-07-20T15:27:11.774318+00:00 app[web.1]: 
+2016-07-20T15:27:11.774318+00:00 app[web.1]: 
+2016-07-20T15:27:14.847075+00:00 app[web.1]: Started GET "/products/2" for 196.221.8.124 at 2016-07-20 15:27:14 +0000
+2016-07-20T15:27:14.859649+00:00 app[web.1]: Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.8ms)
+2016-07-20T15:27:14.861312+00:00 app[web.1]: 
+2016-07-20T15:27:14.861319+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "comments" does not exist
+2016-07-20T15:27:14.861321+00:00 app[web.1]: LINE 5:                WHERE a.attrelid = '"comments"'::regclass
+2016-07-20T15:27:14.861322+00:00 app[web.1]:                                           ^
+2016-07-20T15:27:14.861323+00:00 app[web.1]: :               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+2016-07-20T15:27:14.850399+00:00 app[web.1]: Processing by ProductsController#show as HTML
+2016-07-20T15:27:14.850572+00:00 app[web.1]:   Parameters: {"id"=>"2"}
+2016-07-20T15:27:14.856529+00:00 app[web.1]:   [1m[35mProduct Load (1.8ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+2016-07-20T15:27:14.861323+00:00 app[web.1]:                      pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+2016-07-20T15:27:14.861324+00:00 app[web.1]:                 FROM pg_attribute a LEFT JOIN pg_attrdef d
+2016-07-20T15:27:14.861339+00:00 app[web.1]:                   ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2016-07-20T15:27:14.861340+00:00 app[web.1]:                WHERE a.attrelid = '"comments"'::regclass
+2016-07-20T15:27:14.861341+00:00 app[web.1]:                  AND a.attnum > 0 AND NOT a.attisdropped
+2016-07-20T15:27:14.861342+00:00 app[web.1]:                ORDER BY a.attnum
+2016-07-20T15:27:14.861342+00:00 app[web.1]: ):
+2016-07-20T15:27:14.861343+00:00 app[web.1]:   app/controllers/products_controller.rb:28:in `show'
+2016-07-20T15:27:14.861344+00:00 app[web.1]: 
+2016-07-20T15:27:14.861344+00:00 app[web.1]: 
+2016-07-20T15:27:07.779141+00:00 heroku[router]: at=info method=GET path="/products" host=biber.herokuapp.com request_id=8dcd0f2b-2c1c-4c8e-8585-d47a32105fad fwd="196.221.8.124" dyno=web.1 connect=1ms service=49ms status=200 bytes=14218
+2016-07-20T15:27:11.775240+00:00 heroku[router]: at=info method=GET path="/products/9" host=biber.herokuapp.com request_id=8b50bf01-198f-4318-a1e1-b1d22effc588 fwd="196.221.8.124" dyno=web.1 connect=0ms service=38ms status=500 bytes=1754
+2016-07-20T15:27:13.680624+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=biber.herokuapp.com request_id=6e2b4a12-c385-4792-bdeb-98a1c655358b fwd="196.221.8.124" dyno=web.1 connect=0ms service=8ms status=304 bytes=133
+2016-07-20T15:27:14.858998+00:00 heroku[router]: at=info method=GET path="/products/2" host=biber.herokuapp.com request_id=0d9ba1d8-2ca9-49df-9149-b6579ac95c2f fwd="196.221.8.124" dyno=web.1 connect=0ms service=19ms status=500 bytes=1754

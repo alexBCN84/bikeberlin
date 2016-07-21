@@ -1,47 +1,43 @@
 <div class="container top-page">
-	<div ="row" style ="margin-top: 100px;">
-		<div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4"> 
-			<!--<p id="notice"><%= notice %></p>-->
-			<h1> 
+  <div ="row" style ="margin-top: 100px;">
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4"> 
+      <!--<p id="notice"><%= notice %></p>-->
+      <h1> 
 
-				<% if @user.first_name.present?%>
+	<% if @user.first_name.present?%>
           <% if @user.first_name.end_with? 's' %>
-						<%= @user.first_name %>' profile 
-					<% else %>
-						<%= @user.first_name %>'s profile
-					<% end %>
+	    <%= @user.first_name %>' profile 
+	  <% else %>
+	    <%= @user.first_name %>'s profile
+	  <% end %>
 
-         <% else %>
+        <% else %>
           <% if @user.email.end_with? 's' %>
-						<%= @user.email %>' profile 
-					<% else %>
-						<%= @user.email %>'s profile
-					<% end %> 
+	    <%= @user.email %>' profile 
+	  <% else %>
+	    <%= @user.email %>'s profile
+	  <% end %> 
         <% end %>
 				
-				</h1>
-			<p>
-  			<strong>First name</strong>
-  			<%= @user.first_name %>
-			</p>
+      </h1>
+      <p><strong>First name</strong>
+  	<%= @user.first_name %>
+      </p>
 
-			<p>
-  			<strong>Last name</strong>
-  			<%= @user.last_name %>
-			</p>
+      <p><strong>Last name</strong>
+  	<%= @user.last_name %>
+      </p>
 			
-			<p>
-  			<strong>Email</strong>
-  			<%= @user.email %>
-			</p>
+      <p><strong>Email</strong>
+  	<%= @user.email %>
+      </p>
 
-			<p>
-  			<strong>Password</strong>
-  			<%= @user.password %>
-			</p>
+      <p><strong>Password</strong>
+  	<%= @user.password %>
+      </p>
 
-			<%= link_to 'Edit', edit_user_path(@user) %> |
-			<%= link_to 'Back', root_path %>
-		</div>
-	</div>
+      <%= link_to 'Edit', edit_user_path(@user) %> |
+      <%= link_to 'Back', root_path %>
+    </div>
+  </div>
 </div>
