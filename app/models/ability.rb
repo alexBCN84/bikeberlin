@@ -6,6 +6,7 @@ class Ability
     if user.admin?
       can :manage, :all
     else
+    	can :destroy, User, id: user.id
       can :manage, User, id: user.id
       cannot [:new, :create, :edit, :update, :destroy], Product
       cannot :destroy, Comment
