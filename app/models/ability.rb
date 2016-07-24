@@ -7,7 +7,7 @@ class Ability
       can :manage, :all
     else
 
-      can :manage, :all 
+      can :crud, User, :user_id => user.id
 
     end
   end
