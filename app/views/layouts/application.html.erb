@@ -61,7 +61,11 @@
               </li>
             <% end %>
             <li>
-              <%= link_to "Contact", static_pages_contact_path %>
+              <% if signed_in? && current_user.admin? %>
+                <%= link_to "Users", users_path %>
+              <% else %>
+                <%= link_to "Contact", static_pages_contact_path %>
+              <% end %>
             </li>
           
             <li id="search-box">
@@ -76,10 +80,14 @@
             <li id="sm-login-out">
               <% if user_signed_in? %>
                 <a>Signed in as...
-                  <% if current_user.first_name.present?%>
-                    <%= current_user.first_name %>
+                  <% if current_user.admin? %>
+                  Admin
                   <% else %>
-                    <%= current_user.email %> 
+                    <% if current_user.first_name.present?%>
+                      <%= current_user.first_name %>
+                    <% else %>
+                      <%= current_user.email %> 
+                    <% end %>
                   <% end %>
                 </a>          
               <% end %>
