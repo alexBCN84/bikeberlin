@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
 
-	has_many :orders
-	has_many :comments
+	has_many :orders, dependent: :destroy
+	has_many :comments, dependent: :destroy
 	validates :name, presence: true
 	validates :price, numericality: { :greater_than => 0}
 
