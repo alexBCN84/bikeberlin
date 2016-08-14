@@ -24,6 +24,7 @@ h1 {
   color: #ff005a;
   text-align: center;
 }
+
 .center {
   text-align: center;
 }
@@ -45,7 +46,7 @@ h1 {
 /*navigation*/
 .brand{ font-family: 'Michroma', sans-serif; }
 
-.navbar-default .navbar-nav>li>a { color: red;}
+.navbar-default .navbar-nav>li>a { color: red; }
 
 .navbar-default .navbar-nav>li>a:focus, 
 .navbar-default .navbar-nav>li>a:hover { 
@@ -59,7 +60,7 @@ h1 {
   color: red;
 }
 
-.dropdown-menu>li>a { color: red }
+.dropdown-menu>li>a { color: red; }
 
 .dropdown-menu>li>a:focus, 
 .dropdown-menu>li>a:hover {
@@ -75,7 +76,6 @@ h1 {
   margin-left: 15px;
 }
 
-
 .search-xl {
   width: 150px;
   height: 34px;
@@ -83,12 +83,12 @@ h1 {
   border-radius: 4px;
   color: #ff7f7f;
 }
+
 .btn-search-color { background-color: #ffb2b2; }
 
 @media(min-width: 768px) {
-  #search-box-xs {display: none;}
+  #search-box-xs { display: none; }
 }
-
 
 /*search form under 767 px width*/
 
@@ -103,7 +103,7 @@ h1 {
 
 
 @media(max-width: 767px) {
-  #search-box {display: none;}
+  #search-box { display: none; }
 }
 
 /*common search styles*/
@@ -113,11 +113,11 @@ h1 {
 .btn-login a { color: red; }
 
 .btn-login:hover a { color: #ffffff; }
+
 .btn-login {
   margin: 10px 10px 0 10px;
   background-color: #ffb2b2;
   border: none;
-
 }
 
 .btn-login:hover { background-color: red; }
@@ -125,19 +125,21 @@ h1 {
 /*media queries from 768px to 1100 for smaller navigation bar font*/
 
 @media (min-width:768px) and (max-width: 1100px) {
-  .navbar-nav {font-size: 0.8em;}
+  .navbar-nav { font-size: 0.8em; }
+
   .search-xl {
     width: 80px;
     height: 25px;
   }
+
   .btn-search-color {
     width: 20px;
     height: 25px;
   }
-  .btn-login {
-    font-size: 0.8em;
-  }
+
+  .btn-login { font-size: 0.8em; }
 }
+
 /* Wrapper for page content to push down footer */
 #wrap {
   min-height: 100%;
@@ -147,16 +149,18 @@ h1 {
   /* Pad bottom by footer height */
   padding: 0 0 60px;
 }
+
 /*login-out session different viewports*/
 @media (min-width: 768px) {
   .xs-login-out { display: none; }
+
   .setting-mob { display: none; }
 }
 @media (max-width: 767px) {
   #sm-login-out { display: none; }
+
   .setting-comp { display: none; }
 }
-
 
 /*footer
 /* Set the fixed height of the footer here */
