@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
 	before_action :authenticate_user!, only: [:create]
   before_filter :authorize_admin, only: [:destroy]
+	#create new comment
 	def create
 		@product = Product.find(params[:product_id])
 		@comment = @product.comments.new(comment_params)
@@ -15,7 +16,8 @@ class CommentsController < ApplicationController
 			end
 		end
 	end
-
+	
+	#delete or destroy comment
 	def destroy
 		@comment = Comment.find(params[:id])
 		product = @comment.product

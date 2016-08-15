@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index #this matches app/views/products/index.html.erb
+    #search box development
     if Rails.env.development?
       if params[:q]
         search_term = params[:q]
@@ -11,6 +12,7 @@ class ProductsController < ApplicationController
       else
         @products = Product.all
       end 
+    #search box production
     else
       if params[:q]
         search_term = params[:q]
@@ -19,6 +21,7 @@ class ProductsController < ApplicationController
         @products = Product.all
       end
     end
+    #featured products on carrousel
     @products_featured = Product.limit(3)
   end
 
@@ -39,6 +42,7 @@ class ProductsController < ApplicationController
 
   # POST /products
   # POST /products.json
+  #creating new product
   def create
     @product = Product.new(product_params)
 
@@ -55,6 +59,7 @@ class ProductsController < ApplicationController
 
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
+  #updating existing product
   def update
     respond_to do |format|
       if @product.update(product_params)
@@ -69,6 +74,7 @@ class ProductsController < ApplicationController
 
   # DELETE /products/1
   # DELETE /products/1.json
+  #deleting existing product
   def destroy
     @product.destroy
     respond_to do |format|

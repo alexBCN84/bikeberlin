@@ -4,26 +4,31 @@ class UsersController < ApplicationController
   load_and_authorize_resource
   # GET /users
   # GET /users.json
+  #shows list with all users
   def index
     @users = User.all
   end
 
   # GET /users/1
   # GET /users/1.json
+  #shows data for specific user
   def show
   end
 
   # GET /users/new
+  #shows new user form
   def new
   end
 
   # GET /users/1/edit
+  #shows specific user edit form
   def edit
     @user = User.find(params[:id])
   end
 
   # POST /users
   # POST /users.json
+  #create new user
   def create
     @user = User.new(user_params)
 
@@ -40,6 +45,7 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
+  #updates specific user
   def update
     respond_to do |format|
       if @user.update(user_params)
@@ -54,6 +60,7 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   # DELETE /users/1.json
+  #destroys specific user
   def destroy
     @user.destroy
     respond_to do |format|
