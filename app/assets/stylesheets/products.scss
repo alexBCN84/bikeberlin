@@ -2,3 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #product_index { height: 600px; }
+.btn-details { 
+	background-color: #ffb2b2;
+	color: red;
+	margin: 1px red;
+	&:hover{
+		background-color: red;
+		color: #ffffff;
+	}
+}

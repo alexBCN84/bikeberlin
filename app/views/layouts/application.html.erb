@@ -47,20 +47,20 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li>
+            <li id="main-nav-home"><!-- won't display in @media (min-width: 768px) and (max-width: 900px) -->
               <%= link_to "Home", static_pages_index_path %>
             </li>
-            <li>
+            <li id="main-nav-shop"><!-- won't display in @media (min-width: 768px) and (max-width: 900px) -->
               <%= link_to "Shop", products_path %>
             </li>
-            <%if user_signed_in? %>
-              <li><%= link_to "Orders" %></li>
-            <% else %>
-              <li>
+            <li id="main-nav-orders-about"><!-- won't display in @media (min-width: 768px) and (max-width: 900px) -->
+              <%if user_signed_in? %>
+                <%= link_to "Orders" %></li>
+              <% else %>
                 <%= link_to "About", static_pages_about_path %>
-              </li>
-            <% end %>
-            <li>
+              <% end %>
+            </li>
+            <li id="main-nav-users-contact"><!-- won't display in @media (min-width: 768px) and (max-width: 900px) -->
               <% if signed_in? && current_user.admin? %>
                 <%= link_to "Users", users_path %>
               <% else %>
@@ -79,7 +79,7 @@
             </li>
             <li id="sm-login-out">
               <% if user_signed_in? %>
-                <a>Signed in as...
+                <a>Hello 
                   <% if current_user.admin? %>
                   Admin
                   <% else %>
@@ -115,6 +115,32 @@
                 <%= link_to('Sign up', new_user_registration_path) %>
               </li>
             <% end %>
+
+            <!-- will display only in @media (min-width: 768px) and (max-width: 900px) -->
+            <li class= "dropdown" id="btn-menu">
+              <a id="dropmenu" class="page-scroll" href="#" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">MENU <span class="caret"></span></a>
+              <ul class="dropdown-menu" arialabelledby="dropmenu">
+                <li>
+                  <%= link_to "Home", static_pages_index_path %>
+                </li>
+                <li>
+                  <%= link_to "Shop", products_path %>
+                </li>
+                <%if user_signed_in? %>
+                  <li><%= link_to "Orders" %></li>
+                <% else %>
+                  <li><%= link_to "About", static_pages_about_path %></li>
+                <% end %>
+                <li>
+                  <% if signed_in? && current_user.admin? %>
+                    <%= link_to "Users", users_path %>
+                  <% else %>
+                    <%= link_to "Contact", static_pages_contact_path %>
+                  <% end %>
+                </li>
+              </ul>
+            </li>
+            <!-- /will display only in @media (min-width: 768px) and (max-width: 900px) -->
             <li id="sm-login-out">
               <div class="btn btn-default btn-login">
                 <% if user_signed_in? %>
@@ -125,7 +151,7 @@
               </div>
             </li>
           </ul>
-        </div>
+      
         <!-- /.navbar-collapse -->
       </div>
       <!-- /.container-fluid -->
@@ -155,7 +181,7 @@
       <div class="row">
         <div class="center">
           <% if user_signed_in? %>
-            <font color="red">Signed in as...
+            <font color="red">Hello
               <% if current_user.first_name.present?%>
                 <%= current_user.first_name %>
               <% else %>
