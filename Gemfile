@@ -37,6 +37,8 @@ group :development, :test do
 	gem 'sqlite3'
   #rspec behaviour driven development tests
   gem 'rspec-rails', '~>3.5'
+  #factory girl to generate test data
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do

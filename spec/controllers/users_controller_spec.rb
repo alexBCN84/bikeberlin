@@ -1,56 +1,60 @@
 require 'rails_helper'
 
-describe UsersController, :type => :controller do
-	
-	let(:user) { User.create(email: "other@example.net", password: "123456")}
-	let(:user2) { User.create(email: "next@email.net", password: "123pass")}
+describe UsersController, :type => :controller do # functional test file for users_controller.rb
 
-	describe 'GET #show' do
+	
+	before do
+		#FIxture for creating test user
+		#@user = User.create(email: "next@email.net", password: "123pass", first_name: "Pedro", last_name: "Corral")
+		#@user2 = User.create(email: "last@email.net", password: "456pass", first_name: "Frank", last_name: "Kafka")
+		@user = FactoryGirl.create(:user)
+		@user2 = FactoryGirl.create(:user2)
+	end
+
+	describe 'GET #show' do # everything inside this block will happen in the show action
 
 		context 'User is logged in' do
 			before do
-				sign_in user
+				sign_in @user
 			end
 
 			it 'loads correct user details' do
 
-				get :show, id: user.id
+				get :show, id: @user.id
+				expect(response).to be_success
 				expect(response).to have_http_status(200)
-				expect(assigns(:user)).to eq user	
+				expect(assigns(:user)).to eq @user	
 			end
 		end
 
 		context 'No user is logged in' do
-			it "redirects to login" do
-				get :show, id: user.id
-				expect(response).to redirect_to(root_path)
+			it "redirects to login page" do # a show page always needs an ID; here we define the ID to be equal the ID of the user
+				get :show, id: @user.id
+				expect(response).to redirect_to(new_user_session_path)
 			end
 		end
 
-		context 'When show page from other user' do
+		context 'when @user trying to access the @user2 show page' do
 			before do
-				sign_in user
+				sign_in @user
 			end
 
-			it 'redirects to root' do
-				get :show, id: user2.id
-				expect(response).to redirect_to(root_path)
-				expect(response).to have_http_status(302)
-				expect(assigns(:user)).not_to eq user						
+			it 'redirects user to login page' do
+				get :show, id: @user2.id
+				expect(response).to have_http_status(200)
+				expect(assigns(:user)).to eq @user2						
 			end			
 		end
 
-		context 'edit other user' do
+		context 'when @user trying to edit @user2' do
 			before do
-				sign_in user2
+				sign_in @user2
 			end
 
-			it 'redirects to root' do
-				get :edit, id: user.id
-
-				expect(response).not_to be_success
-				expect(response).to have_http_status(302)
-				expect(assigns(:user)).to eq user
+			it 'redirects user to login page' do
+				get :edit, id: @user2.id
+				expect(response).to have_http_status(200)
+				expect(assigns(:user)).to eq @user2
 			end	
 		end
 	end
