@@ -56,3 +56,5 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 ## Gemfile for Rails 3+, Sinatra, or Merb
 gem 'will_paginate', '~> 3.0.5'
+# Payments Processing with Stripe
+gem 'stripe'

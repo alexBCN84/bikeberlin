@@ -73,6 +73,15 @@
 		</div>
 	</div>
 	</div>
+  <br>
+  <br>
+
+  <!-- Stripe Checkout -->
+  <%= form_tag "/payments/create" do %>
+    <%= render partial: "shared/stripe_checkout_button" %>
+  <% end %>
+
+  <br>
 	<% if user_signed_in? %>
 		<%= link_to 'Edit', edit_product_path(@product) %> |
 	<% end %>
