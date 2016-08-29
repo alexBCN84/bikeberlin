@@ -78,6 +78,8 @@
 
   <!-- Stripe Checkout -->
   <%= form_tag "/payments/create" do %>
+  	<!-- making product_id accessible: this enables payments controller to access product-->
+    <%= hidden_field_tag(:product_id, @product.id) %>
     <%= render partial: "shared/stripe_checkout_button" %>
   <% end %>
 
