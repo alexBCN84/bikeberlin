@@ -1,4 +1,6 @@
 class PaymentsController < ApplicationController
+  #add this filter on any controller you want to only allow logged in users
+  before_filter :authenticate_user!
 
 # POST /payments
   def create
