@@ -22,4 +22,3 @@ class UserMailer < ApplicationMailer
   end
 
 end
-end
