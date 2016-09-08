@@ -56,7 +56,7 @@ group :development do
   gem "brakeman", :require => false
 end
 group :production do
-	gem 'rails_12factor' 
+	#gem 'rails_12factor' "no longer needed in rails 5"
 	gem 'pg'
 end
 gem 'devise'
