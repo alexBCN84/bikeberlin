@@ -65,3 +65,6 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.0'
 # Payments Processing with Stripe
 gem 'stripe'
+
+#Getting memcachier plugin to work
+gem 'dalli'
