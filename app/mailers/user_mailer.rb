@@ -10,8 +10,7 @@ class UserMailer < ApplicationMailer
 
   def welcome(user)
   	@appname = "Bike Berlin"
-    @user = user
-  	mail( :to => @user.email,
+  	mail( :to => user.email,
   				:subject => "Welcome to #{@appname}!")
   end
 
@@ -19,13 +18,6 @@ class UserMailer < ApplicationMailer
     @user = user
     @product = product
     mail(to: @user.email, subject: 'Thank you for your order!')
-  end
-
-  def welcome
-    @name = params[:name]
-    @email = params[:email]
-    @message = params[:message]
-    UserMailer.user_registration_controller(@email, @name, @message).deliver_now
   end
   
   def thank_you
