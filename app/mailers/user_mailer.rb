@@ -12,6 +12,7 @@ class UserMailer < ApplicationMailer
   	@appname = "Bike Berlin"
   	mail( :to => user.email,
   				:subject => "Welcome to #{@appname}!")
+    UserMailer.welcome(@user).deliver_now
   end
 
   def order_complete(user, product)
