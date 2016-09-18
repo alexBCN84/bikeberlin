@@ -57,37 +57,37 @@
 					<div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> 
 				</p>
 			</div>
-			<div class="col-xs-12 col-sm-6">
-				<%= image_tag(@product.image_url, class: "img-zoom  img-responsive img-rounded, data_zoom_image: @product.image_url_large")%>  
-				<br>
-				<div id="add-reviews">
-					<%= render 'new_comment' %>
-				</div>
-    	</div>
-  	</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<div id="ratings">
-						<%= render 'comments' %>
-					</div>
+		<% end %><!-- / cache -->
+		<div class="col-xs-12 col-sm-6">
+			<%= image_tag(@product.image_url, class: "img-zoom  img-responsive img-rounded, data_zoom_image: @product.image_url_large")%>  
+			<br>
+			<div id="add-reviews">
+				<%= render 'new_comment' %>
+			</div>
+    </div>
+  </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="ratings">
+					<%= render 'comments' %>
 				</div>
 			</div>
 		</div>
-  	<br>
-  	<br>
+	</div>
+  <br>
+  <br>
 
-  	<!-- Stripe Checkout -->
-  	<%= form_tag "/payments/create" do %>
+  <!-- Stripe Checkout -->
+  <%= form_tag "/payments/create" do %>
   		<!-- making product_id accessible: this enables payments controller to access product-->
-    	<%= hidden_field_tag(:product_id, @product.id) %>
-    	<%= render partial: "shared/stripe_checkout_button" %>
-  	<% end %>
+    <%= hidden_field_tag(:product_id, @product.id) %>
+    <%= render partial: "shared/stripe_checkout_button" %>
+  <% end %>
 
-  	<br>
-		<% if user_signed_in? %>
-			<%= link_to 'Edit', edit_product_path(@product) %> |
-		<% end %>
-		<%= link_to 'Back', products_path %>
-	<% end %><!-- / cache -->
+  <br>
+	<% if user_signed_in? %>
+		<%= link_to 'Edit', edit_product_path(@product) %> |
+	<% end %>
+	<%= link_to 'Back', products_path %>
 </div>
