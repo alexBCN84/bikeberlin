@@ -68,3 +68,6 @@ gem 'stripe'
 
 #Getting memcachier plugin to work
 gem 'dalli'
+
+#Redis caching method
+gem 'redis-rails'
