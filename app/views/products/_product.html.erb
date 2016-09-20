@@ -1,5 +1,5 @@
-<% cache product do %>
-  <div id="product_index" class="col-sm-6 col-md-4 col-lg-4">
+<div id="product_index" class="col-sm-6 col-md-4 col-lg-4">
+  <% cache product do %>
     <%= image_tag(product.image_url, class: "img-responsive") %>
   
     <h3><strong><%= product.name %></strong></h3>
@@ -7,14 +7,14 @@
     <p><%= product.description %></p>
     <p><%= product.color %></p>
     <p><strong><%= product.price %> €</strong></p>
-    <% if signed_in? && current_user.admin? %>
-      <p><%= link_to 'Show', product %> |<%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-  	 </p>
-    <% else %>
-      <br>
-      <%= link_to product do %> 
-        <span class="btn btn-details"><i class="glyphicon glyphicon-eye-open"></i> Details</span>
-      <% end %>
+  <% end %><!--/cache -->
+  <% if signed_in? && current_user.admin? %>
+    <p><%= link_to 'Show', product %> |<%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  	</p>
+  <% else %>
+    <br>
+    <%= link_to product do %> 
+    <span class="btn btn-details"><i class="glyphicon glyphicon-eye-open"></i> Details</span>
     <% end %>
-  </div><!-- /col -->
-<% end %><!--/cache -->
+  <% end %>
+</div><!-- /col -->
