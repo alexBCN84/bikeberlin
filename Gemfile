@@ -58,6 +58,7 @@ end
 group :production do
 	#gem 'rails_12factor' "no longer needed in rails 5"
 	gem 'pg'
+  gem 'newrelic_rpm'
 end
 gem 'devise'
 gem 'cancancan', '~> 1.10'
