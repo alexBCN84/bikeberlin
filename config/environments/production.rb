@@ -93,5 +93,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-    config.action_mailer.default_url_options = { :host => 'biber.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'biber.herokuapp.com' }
+  
+  # ActionCable requests on production
+  config.web_socket_server_url = "wss://biber.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://your-app-name.herokuapp.com', 'http://biber.herokuapp.com']
 end

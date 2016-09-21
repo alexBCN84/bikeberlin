@@ -54,4 +54,6 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   #Redis
   #config.cache_store = :redis_store, "redis://localhost:6379/0/cache", { expires_in: 90.minutes }
+  #This will tell the rails generator to generate plain JavaScript files instead of CoffeeScript files
+  config.app_generators.javascript_engine = :javascript
 end
