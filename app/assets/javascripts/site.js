@@ -11,5 +11,5 @@ var refreshRating = function() {
 
 $(document).on('turbolinks:load', function() {
   refreshRating();
-  $('.img-zoom').elevateZoom();
+  $('.img-zoom').elevateZoom({zoomType: "lens", lensShape: "round", lensSize: 300, scrollZoom: true, lensFadeIn: 500, lensFadeOut: 500});
 });
